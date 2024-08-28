@@ -41,8 +41,7 @@ Experimental results demonstrate that the proposed model significantly improves 
 <ul>
   <li><a href="#1">Model Architecture</a></li>
   <li><a href="#2">Evaluation on different models</a></li>
-  <li><a href="#3">4.1 Naturalness, 4.2 Ablation study</a></li>
-  <li><a href="#4">4.3 Unseen data</a></li>
+  <li><a href="#3">Naturalness</a></li>
 </ul>
 </div>
 
@@ -62,26 +61,32 @@ Experimental results demonstrate that the proposed model significantly improves 
 </div>
 <hr>
 <a name="2"><h2>Evaluation on different expressive TTS models</h2></a>
-<p>
-GT: Ground-truth<br>
-M1: Tacotron2-GST<br>
-M2: StyleSpeech<br>
-M3: Meta-StyleSpeech<br>
-M4: FastSpeech2-GST<br>
-M5: Proposed model<br>
-M6: Proposed model (w/o sine generator)<br>
-M7: Proposed model (w/o vector quantization)<br>
-M8: Proposed model (w/o style-to-text alignment)<br>
-</p>
-<br>
+<ul>
+  <li>GT: Ground-truth</li>
+  <li>Tacotron2</li>
+  <li>FastSpeech2</li>
+  <li>DailyTalk</li>
+  <li>H4C-TTS (Proposed model)</li>
+</ul>
 <hr>
-<a name="3"><h2>4.1 Naturalness, 4.2 Ablation study</h2></a>
-<h3>Angry</h3>
+<a name="3"><h2>Naturalness</h2></a>
+<h3>Sample 01</h3>
 <p><b>Text (Kr): 고모는 조카딸의 품행 나쁜 것을 밉게 보았던 모양이지.</b><br>Translation: The aunt must have hated her niece's bad behavior.</p>
 <table>
   <thead>
     <tr>
-      <th style="text-align: center"><strong>GT</strong></th>
+      <th style="text-align: center"><strong>GT (History)</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><audio src="samples/history/is24_01.wav" controls="" preload=""></audio></td>
+  </tbody>
+</table>
+<hr>
+<table>
+  <thead>
+    <tr>
       <th style="text-align: center"><strong>Tacotron2</strong></th>
       <th style="text-align: center"><strong>Fastspeech2</strong></th>
       <th style="text-align: center"><strong>DailyTalk</strong></th>
@@ -90,7 +95,6 @@ M8: Proposed model (w/o style-to-text alignment)<br>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left"><audio src="samples/history/is24_01.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="samples/Tacotron2/is24_01.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="samples/FS2/is24_01.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="samples/DailyTalk/is24_01.wav" controls="" preload=""></audio></td>
@@ -98,12 +102,23 @@ M8: Proposed model (w/o style-to-text alignment)<br>
   </tbody>
 </table>
 <br>
-<h3>Anxiety</h3>
+<h3>Sample 02</h3>
 <p><b>Text (Kr): 물건을 팔려면 노력을 해야 해요.</b><br>Translation: You have to make an effort to sell things.</p>
 <table>
   <thead>
     <tr>
-      <th style="text-align: center"><strong>GT</strong></th>
+      <th style="text-align: center"><strong>GT (History)</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><audio src="samples/history/is24_02.wav" controls="" preload=""></audio></td>
+  </tbody>
+</table>
+<hr>
+<table>
+  <thead>
+    <tr>
       <th style="text-align: center"><strong>Tacotron2</strong></th>
       <th style="text-align: center"><strong>Fastspeech2</strong></th>
       <th style="text-align: center"><strong>DailyTalk</strong></th>
@@ -112,7 +127,6 @@ M8: Proposed model (w/o style-to-text alignment)<br>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left"><audio src="samples/history/is24_02.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="samples/Tacotron2/is24_02.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="samples/FS2/is24_02.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="samples/DailyTalk/is24_02.wav" controls="" preload=""></audio></td>
@@ -120,12 +134,23 @@ M8: Proposed model (w/o style-to-text alignment)<br>
   </tbody>
 </table>
 <br>
-<h3>Embarrassment</h3>
+<h3>Sample 03</h3>
 <p><b>Text (Kr): 이 많은 선물은 다 뭐예요?</b><br>Translation: What are all these presents?</p>
 <table>
   <thead>
     <tr>
-      <th style="text-align: center"><strong>GT</strong></th>
+      <th style="text-align: center"><strong>GT (History)</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><audio src="samples/history/is24_03.wav" controls="" preload=""></audio></td>
+  </tbody>
+</table>
+<hr>
+<table>
+  <thead>
+    <tr>
       <th style="text-align: center"><strong>Tacotron2</strong></th>
       <th style="text-align: center"><strong>Fastspeech2</strong></th>
       <th style="text-align: center"><strong>DailyTalk</strong></th>
@@ -134,7 +159,6 @@ M8: Proposed model (w/o style-to-text alignment)<br>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left"><audio src="samples/history/is24_03.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="samples/Tacotron2/is24_03.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="samples/FS2/is24_03.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="samples/DailyTalk/is24_03.wav" controls="" preload=""></audio></td>
@@ -142,12 +166,23 @@ M8: Proposed model (w/o style-to-text alignment)<br>
   </tbody>
 </table>
 <br>
-<h3>Hurt</h3>
+<h3>Sample 04</h3>
 <p><b>Text (Kr): 나는 온몸이 아파 자는 것은 생각도 할 수 없었다.</b><br>Translation: I couldn't even think of sleeping because my whole body was hurting.</p>
 <table>
   <thead>
     <tr>
-      <th style="text-align: center"><strong>GT</strong></th>
+      <th style="text-align: center"><strong>GT (History)</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><audio src="samples/history/is24_04.wav" controls="" preload=""></audio></td>
+  </tbody>
+</table>
+<hr>
+<table>
+  <thead>
+    <tr>
       <th style="text-align: center"><strong>Tacotron2</strong></th>
       <th style="text-align: center"><strong>Fastspeech2</strong></th>
       <th style="text-align: center"><strong>DailyTalk</strong></th>
@@ -156,7 +191,6 @@ M8: Proposed model (w/o style-to-text alignment)<br>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left"><audio src="samples/history/is24_04.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="samples/Tacotron2/is24_04.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="samples/FS2/is24_04.wav" controls="" preload=""></audio></td>
       <td style="text-align: left"><audio src="samples/DailyTalk/is24_04.wav" controls="" preload=""></audio></td>
@@ -164,7 +198,6 @@ M8: Proposed model (w/o style-to-text alignment)<br>
   </tbody>
 </table>
 <br>
-
 
 <footer class="site-footer">
 <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com/">GitHub Pages</a>.</span>
